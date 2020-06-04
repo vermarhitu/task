@@ -34,17 +34,6 @@ CREATE TABLE `projects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `projects`
---
-
-INSERT INTO `projects` (`project_id`, `project_name`, `project_description`, `status`) VALUES
-(14, 'test', 'test task', 1),
-(15, 'test', 'test task', 1),
-(16, 'test', 'test1', 1);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tasks`
 --
 
@@ -56,27 +45,6 @@ CREATE TABLE `tasks` (
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tasks`
---
-
-INSERT INTO `tasks` (`task_id`, `project_id`, `task_name`, `task_description`, `status`) VALUES
-(14, 0, 'test', 'test task', 1),
-(15, 0, 'test', 'test task', 1),
-(16, 0, 'test', 'test task', 1),
-(17, 0, 'test', 'test task', 1),
-(18, 0, 'test', 'test task', 1),
-(19, 0, 'test', 'test task', 1),
-(20, 0, 'test', 'test task', 1),
-(21, 0, 'test', 'test task', 1),
-(22, 0, 'test', 'test task', 1),
-(23, 0, 'test', 'test task', 1),
-(24, 15, 'test', 'test task', 1),
-(25, 16, 'test2', 'test3', 1);
-
---
--- Indexes for dumped tables
---
 
 --
 -- Indexes for table `projects`
@@ -89,21 +57,3 @@ ALTER TABLE `projects`
 --
 ALTER TABLE `tasks`
   ADD PRIMARY KEY (`task_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `projects`
---
-ALTER TABLE `projects`
-  MODIFY `project_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
---
--- AUTO_INCREMENT for table `tasks`
---
-ALTER TABLE `tasks`
-  MODIFY `task_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
